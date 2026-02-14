@@ -1,22 +1,53 @@
-Tables 5 code:
-#1===================
+1. Table 5 code:
+===========================
 i, j = 1, 5
+
 print("Tables of 5")
 while i <= 10:
- print(j * i)
+ print(j,"X",i,"=",j * i)
  i += 1
 
-#2===============================
-Table 5 code using for and range loop
+=====================
+Output:
+Tables of 5
+5 X 1 = 5
+5 X 2 = 10
+5 X 3 = 15
+5 X 4 = 20
+5 X 5 = 25
+5 X 6 = 30
+5 X 7 = 35
+5 X 8 = 40
+5 X 9 = 45
+5 X 10 = 50
+======================================
+==========================================================
+
+2. Table 5 code using for and range loop
 num = 5
 print("tables of 5")
 range(1,11)
 for i in range(1,11):
- print(num * i)
+ print(num,'X',i,'=',num * i)
 
+Output:
+tables of 5
+5 X 1 = 5
+5 X 2 = 10
+5 X 3 = 15
+5 X 4 = 20
+5 X 5 = 25
+5 X 6 = 30
+5 X 7 = 35
+5 X 8 = 40
+5 X 9 = 45
+5 X 10 = 50
 
-#3==========================================
-Print odd and even numbers in range 1 to 20
+==================================================================
+==================================================================
+
+Assignment # 3
+#Print odd and even numbers in range 1 to 20
 
 for i in range(1,21):
  if i % 2 == 0:
@@ -28,3 +59,73 @@ else:
  for i in range(1,21):
   if i % 2 ==1:
    print('odd numbers',i)
+
+
+Output:
+even numbers 2
+even numbers 4
+even numbers 6
+even numbers 8
+even numbers 10
+even numbers 12
+even numbers 14
+even numbers 16
+even numbers 18
+even numbers 20
+odd numbers 1
+odd numbers 3
+odd numbers 5
+odd numbers 7
+odd numbers 9
+odd numbers 11
+odd numbers 13
+odd numbers 15
+odd numbers 17
+odd numbers 19
+
+
+
+Assignment #4.
+Create a function to display the product details like- Id, prodName, price inside the function
+and calculate the total price of the product by passing the discount variable as 'global variable'
+
+And also you need  create another function that takes the quantity of the product as an argument and calculate the total price after applying the discount and return the total price from the function. 
+=======================================================
+Code:
+discount = 10
+def prodcut_info(prd_id,prd_name,prd_price):         
+    print('prd-id','=',prd_id)
+    print('prd-name','=',prd_name)
+    print('prd-price','=',prd_price,'per kg')
+    #discount = 10
+    total_price = prd_price - discount / 100 * prd_price
+    print('total-price after discount','=',total_price)
+    
+    def product_info(prd_quantity):
+        print('prd-quantity',prd_quantity)
+        total_price_1 =  total_price * prd_quantity
+        print('total-price for',prd_quantity,'kg after discount =',total_price_1)
+
+    product_info(3)
+       
+prodcut_info(1,'apple',200)
+prodcut_info(2,'orange',100)
+
+=============================================
+
+Output:
+	
+prd-id = 1
+prd-name = apple
+prd-price = 200 per kg
+total-price after discount = 180.0
+prd-quantity 3
+total-price for 3 kg after discount = 540.0
+prd-id = 2
+prd-name = orange
+prd-price = 100 per kg
+total-price after discount = 90.0
+prd-quantity 3
+total-price for 3 kg after discount = 270.0
+
+
